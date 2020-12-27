@@ -33,6 +33,7 @@ func (queue *Queue) Pop() (error,int) {
 	}
 	val := queue.front.data
 	queue.front = queue.front.next
+	queue.size--
 	return nil,val
 }
 
